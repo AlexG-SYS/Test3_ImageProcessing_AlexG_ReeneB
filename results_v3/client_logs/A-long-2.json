@@ -1,0 +1,108 @@
+{
+  "job_id": "961aeeac-dfb1-4293-89c8-0da4d1f54dd2",
+  "mode": "long",
+  "image": "test.jpg",
+  "baseline_version": 1,
+  "final_job": {
+    "status": "completed",
+    "version": 6,
+    "started_at": "2026-11-11T23:01:22.403707-06:00",
+    "completed_at": "2026-11-11T23:01:53.840013-06:00"
+  },
+  "requests": [
+    {
+      "seq": 1,
+      "mode": "long",
+      "kind": "initial",
+      "url": "/v1/jobs/961aeeac-dfb1-4293-89c8-0da4d1f54dd2",
+      "start_ms": 1794459682249,
+      "receipt_ms": 1794459682270,
+      "http_status": 200,
+      "version": 1,
+      "outcome": "initial_200",
+      "render_ms": 1794459682271,
+      "error": null
+    },
+    {
+      "seq": 2,
+      "mode": "long",
+      "kind": "long",
+      "url": "/v1/jobs/961aeeac-dfb1-4293-89c8-0da4d1f54dd2?after=1&wait=20",
+      "start_ms": 1794459682271,
+      "receipt_ms": 1794459682418,
+      "http_status": 200,
+      "version": 2,
+      "outcome": "newer_200",
+      "render_ms": 1794459682419,
+      "error": null
+    },
+    {
+      "seq": 3,
+      "mode": "long",
+      "kind": "long",
+      "url": "/v1/jobs/961aeeac-dfb1-4293-89c8-0da4d1f54dd2?after=2&wait=20",
+      "start_ms": 1794459682421,
+      "receipt_ms": 1794459702451,
+      "http_status": 204,
+      "version": null,
+      "outcome": "no_change_204",
+      "render_ms": null,
+      "error": null
+    },
+    {
+      "seq": 4,
+      "mode": "long",
+      "kind": "long",
+      "url": "/v1/jobs/961aeeac-dfb1-4293-89c8-0da4d1f54dd2?after=2&wait=20",
+      "start_ms": 1794459702452,
+      "receipt_ms": 1794459713615,
+      "http_status": 200,
+      "version": 3,
+      "outcome": "newer_200",
+      "render_ms": 1794459713615,
+      "error": null
+    },
+    {
+      "seq": 5,
+      "mode": "long",
+      "kind": "long",
+      "url": "/v1/jobs/961aeeac-dfb1-4293-89c8-0da4d1f54dd2?after=3&wait=20",
+      "start_ms": 1794459713616,
+      "receipt_ms": 1794459713699,
+      "http_status": 200,
+      "version": 4,
+      "outcome": "newer_200",
+      "render_ms": 1794459713700,
+      "error": null
+    },
+    {
+      "seq": 6,
+      "mode": "long",
+      "kind": "long",
+      "url": "/v1/jobs/961aeeac-dfb1-4293-89c8-0da4d1f54dd2?after=4&wait=20",
+      "start_ms": 1794459713701,
+      "receipt_ms": 1794459713845,
+      "http_status": 200,
+      "version": 5,
+      "outcome": "newer_200",
+      "render_ms": 1794459713846,
+      "error": null
+    },
+    {
+      "seq": 7,
+      "mode": "long",
+      "kind": "long",
+      "url": "/v1/jobs/961aeeac-dfb1-4293-89c8-0da4d1f54dd2?after=5&wait=20",
+      "start_ms": 1794459713847,
+      "receipt_ms": 1794459713859,
+      "http_status": 200,
+      "version": 6,
+      "outcome": "newer_200",
+      "render_ms": 1794459713861,
+      "error": null
+    }
+  ],
+  "events": [],
+  "stream_opens": [],
+  "stream_errors": []
+}

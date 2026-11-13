@@ -1,0 +1,95 @@
+{
+  "job_id": "d1025583-61ab-4354-b387-f873bdbf3712",
+  "mode": "long",
+  "image": "test.jpg",
+  "baseline_version": 1,
+  "final_job": {
+    "status": "completed",
+    "version": 6,
+    "started_at": "2026-11-11T22:59:05.652888-06:00",
+    "completed_at": "2026-11-11T22:59:37.127242-06:00"
+  },
+  "requests": [
+    {
+      "seq": 1,
+      "mode": "long",
+      "kind": "initial",
+      "url": "/v1/jobs/d1025583-61ab-4354-b387-f873bdbf3712",
+      "start_ms": 1794459545497,
+      "receipt_ms": 1794459545514,
+      "http_status": 200,
+      "version": 1,
+      "outcome": "initial_200",
+      "render_ms": 1794459545516,
+      "error": null
+    },
+    {
+      "seq": 2,
+      "mode": "long",
+      "kind": "long",
+      "url": "/v1/jobs/d1025583-61ab-4354-b387-f873bdbf3712?after=1&wait=20",
+      "start_ms": 1794459545517,
+      "receipt_ms": 1794459545667,
+      "http_status": 200,
+      "version": 2,
+      "outcome": "newer_200",
+      "render_ms": 1794459545669,
+      "error": null
+    },
+    {
+      "seq": 3,
+      "mode": "long",
+      "kind": "long",
+      "url": "/v1/jobs/d1025583-61ab-4354-b387-f873bdbf3712?after=2&wait=20",
+      "start_ms": 1794459545670,
+      "receipt_ms": 1794459565694,
+      "http_status": 204,
+      "version": null,
+      "outcome": "no_change_204",
+      "render_ms": null,
+      "error": null
+    },
+    {
+      "seq": 4,
+      "mode": "long",
+      "kind": "long",
+      "url": "/v1/jobs/d1025583-61ab-4354-b387-f873bdbf3712?after=2&wait=20",
+      "start_ms": 1794459565695,
+      "receipt_ms": 1794459576937,
+      "http_status": 200,
+      "version": 3,
+      "outcome": "newer_200",
+      "render_ms": 1794459576938,
+      "error": null
+    },
+    {
+      "seq": 5,
+      "mode": "long",
+      "kind": "long",
+      "url": "/v1/jobs/d1025583-61ab-4354-b387-f873bdbf3712?after=3&wait=20",
+      "start_ms": 1794459576940,
+      "receipt_ms": 1794459577002,
+      "http_status": 200,
+      "version": 4,
+      "outcome": "newer_200",
+      "render_ms": 1794459577003,
+      "error": null
+    },
+    {
+      "seq": 6,
+      "mode": "long",
+      "kind": "long",
+      "url": "/v1/jobs/d1025583-61ab-4354-b387-f873bdbf3712?after=4&wait=20",
+      "start_ms": 1794459577003,
+      "receipt_ms": 1794459577141,
+      "http_status": 200,
+      "version": 6,
+      "outcome": "newer_200",
+      "render_ms": 1794459577144,
+      "error": null
+    }
+  ],
+  "events": [],
+  "stream_opens": [],
+  "stream_errors": []
+}

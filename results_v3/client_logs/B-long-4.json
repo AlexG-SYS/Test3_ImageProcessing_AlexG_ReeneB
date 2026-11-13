@@ -1,0 +1,95 @@
+{
+  "job_id": "edad3dca-ba41-4912-acfa-8b660d736d8a",
+  "mode": "long",
+  "image": "test.jpg",
+  "baseline_version": 1,
+  "final_job": {
+    "status": "completed",
+    "version": 6,
+    "started_at": "2026-11-11T22:58:16.771573-06:00",
+    "completed_at": "2026-11-11T22:58:18.177178-06:00"
+  },
+  "requests": [
+    {
+      "seq": 1,
+      "mode": "long",
+      "kind": "initial",
+      "url": "/v1/jobs/edad3dca-ba41-4912-acfa-8b660d736d8a",
+      "start_ms": 1794459496578,
+      "receipt_ms": 1794459496597,
+      "http_status": 200,
+      "version": 1,
+      "outcome": "initial_200",
+      "render_ms": 1794459496598,
+      "error": null
+    },
+    {
+      "seq": 2,
+      "mode": "long",
+      "kind": "long",
+      "url": "/v1/jobs/edad3dca-ba41-4912-acfa-8b660d736d8a?after=1&wait=20",
+      "start_ms": 1794459496598,
+      "receipt_ms": 1794459496787,
+      "http_status": 200,
+      "version": 2,
+      "outcome": "newer_200",
+      "render_ms": 1794459496789,
+      "error": null
+    },
+    {
+      "seq": 3,
+      "mode": "long",
+      "kind": "long",
+      "url": "/v1/jobs/edad3dca-ba41-4912-acfa-8b660d736d8a?after=2&wait=20",
+      "start_ms": 1794459496791,
+      "receipt_ms": 1794459497973,
+      "http_status": 200,
+      "version": 3,
+      "outcome": "newer_200",
+      "render_ms": 1794459497974,
+      "error": null
+    },
+    {
+      "seq": 4,
+      "mode": "long",
+      "kind": "long",
+      "url": "/v1/jobs/edad3dca-ba41-4912-acfa-8b660d736d8a?after=3&wait=20",
+      "start_ms": 1794459497975,
+      "receipt_ms": 1794459498036,
+      "http_status": 200,
+      "version": 4,
+      "outcome": "newer_200",
+      "render_ms": 1794459498037,
+      "error": null
+    },
+    {
+      "seq": 5,
+      "mode": "long",
+      "kind": "long",
+      "url": "/v1/jobs/edad3dca-ba41-4912-acfa-8b660d736d8a?after=4&wait=20",
+      "start_ms": 1794459498038,
+      "receipt_ms": 1794459498183,
+      "http_status": 200,
+      "version": 5,
+      "outcome": "newer_200",
+      "render_ms": 1794459498184,
+      "error": null
+    },
+    {
+      "seq": 6,
+      "mode": "long",
+      "kind": "long",
+      "url": "/v1/jobs/edad3dca-ba41-4912-acfa-8b660d736d8a?after=5&wait=20",
+      "start_ms": 1794459498188,
+      "receipt_ms": 1794459498198,
+      "http_status": 200,
+      "version": 6,
+      "outcome": "newer_200",
+      "render_ms": 1794459498200,
+      "error": null
+    }
+  ],
+  "events": [],
+  "stream_opens": [],
+  "stream_errors": []
+}

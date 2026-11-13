@@ -1,0 +1,63 @@
+{
+  "job_id": "c0074b80-0ba0-4a3c-899a-1b21ad30168a",
+  "mode": "sse",
+  "image": "test.jpg",
+  "baseline_version": 1,
+  "final_job": {
+    "status": "completed",
+    "version": 6,
+    "started_at": "2026-11-11T23:00:32.653919-06:00",
+    "completed_at": "2026-11-11T23:01:04.109284-06:00"
+  },
+  "requests": [],
+  "events": [
+    {
+      "seq": 1,
+      "version": 1,
+      "status": "queued",
+      "receipt_ms": 1794459632590,
+      "render_ms": 1794459632591
+    },
+    {
+      "seq": 2,
+      "version": 2,
+      "status": "processing",
+      "receipt_ms": 1794459632665,
+      "render_ms": 1794459632666
+    },
+    {
+      "seq": 3,
+      "version": 3,
+      "status": "processing",
+      "receipt_ms": 1794459663908,
+      "render_ms": 1794459663909
+    },
+    {
+      "seq": 4,
+      "version": 4,
+      "status": "processing",
+      "receipt_ms": 1794459663970,
+      "render_ms": 1794459663972
+    },
+    {
+      "seq": 5,
+      "version": 5,
+      "status": "processing",
+      "receipt_ms": 1794459664111,
+      "render_ms": 1794459664112
+    },
+    {
+      "seq": 6,
+      "version": 6,
+      "status": "completed",
+      "receipt_ms": 1794459664114,
+      "render_ms": 1794459664116
+    }
+  ],
+  "stream_opens": [
+    {
+      "ms": 1794459632589
+    }
+  ],
+  "stream_errors": []
+}
