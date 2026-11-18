@@ -50,6 +50,7 @@ const dom = {
   jobEmpty: document.getElementById("job-empty"),
   jobActive: document.getElementById("job-active"),
   jobStrip: document.getElementById("job-strip"),
+  openSseButton: document.getElementById("open-sse-button"),
   jobIdLabel: document.getElementById("job-id-label"),
   jobStatusBadge: document.getElementById("job-status-badge"),
   jobAside: document.getElementById("job-aside"),
@@ -235,6 +236,9 @@ function renderJobCard(job) {
   dom.jobModeLabel.textContent = MODE_LABELS[job.mode] || job.mode;
   dom.jobVersionLabel.textContent = j.version != null ? String(j.version) : "";
   dom.jobStageLabel.textContent = STAGE_LABELS[j.stage] || j.stage || "";
+  dom.openSseButton.hidden = job.mode !== "sse" || !j.id;
+  if (j.id) dom.openSseButton.href = `/sse.html?job=${encodeURIComponent(j.id)}`;
+
   dom.jobProgress.value = j.variantsCompleted || 0; // REAL variants only
   dom.jobProgressText.textContent = `${j.variantsCompleted || 0} of 3`;
   // the simulated counter is labelled and appears only while the experiment is on.

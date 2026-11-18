@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>ImageLab · SSE stream</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .sse-layout { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(280px, .75fr); gap: 18px; }
+    .sse-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+    .sse-status { display: flex; align-items: center; gap: 8px; color: var(--dim); }
+    .sse-status[data-state="connected"] { color: var(--success); }
+    .sse-status[data-state="error"] { color: var(--error); }
+    .job-facts-sse { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0 0 16px; }
+    .job-facts-sse div { padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--well); }
+    .job-facts-sse dt { font-size: .72rem; color: var(--dim); }
+    .job-facts-sse dd { margin: 2px 0 0; font-weight: 600; }
+    .raw-card { min-width: 0; }
+    .raw-log { height: 570px; overflow: auto; margin: 0; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--well); color: #d8d8d2; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .76rem; line-height: 1.55; white-space: pre-wrap; overflow-wrap: anywhere; }
+    @media (max-width: 850px) { .sse-layout { grid-template-columns: 1fr; } .raw-log { height: 300px; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand__name">ImageLab</span>
+      <span class="brand__tag">Live SSE job viewer</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="page-head">
+      <h1>Live processing job</h1>
+      <p>Variant images update automatically as the server sends new snapshots.</p>
+    </div>
+
+    <div class="sse-layout">
+      <section class="card">
+        <div class="card__head">
+          <h2 class="card__title">Job <span id="job-id-label"></span></h2>
+        </div>
+
+        <div class="sse-toolbar">
+          <div class="sse-status" id="stream-status" data-state="connecting">Connecting to SSE stream...</div>
+          <a id="raw-stream-link" class="btn btn--outline btn--sm" href="#" target="_blank" rel="noopener">Open raw SSE stream</a>
+        </div>
+
+        <dl class="job-facts-sse">
+          <div><dt>Status</dt><dd id="job-status">-</dd></div>
+          <div><dt>Stage</dt><dd id="job-stage">-</dd></div>
+          <div><dt>Version</dt><dd id="job-version">-</dd></div>
+        </dl>
+
+        <div class="results-grid" id="variant-grid"></div>
+      </section>
+
+      <section class="card raw-card">
+        <div class="card__head">
+          <h2 class="card__title">Raw SSE data</h2>
+        </div>
+        <pre class="raw-log" id="raw-log">Waiting for job-update events...
+</pre>
+      </section>
+    </div>
+  </main>
+
+  <script src="sse-view.js"></script>
+</body>
+</html>
